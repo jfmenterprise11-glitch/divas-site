@@ -167,20 +167,24 @@ Quedan <span id="spots">6</span> espacios disponibles hoy
 <section class="container form-section" id="formulario">
 <h2>Reserva Tu Cita</h2>
 
-<form>
-<input type="text" placeholder="Nombre completo" required>
+<form name="contact" method="POST" data-netlify="true">
 
-<select required>
+<input type="hidden" name="form-name" value="contact">
+
+<input type="text" name="nombre" placeholder="Nombre completo" required>
+
+<select name="tipo" required>
 <option value="">Selecciona</option>
 <option>Hombre</option>
 <option>Mujer</option>
 <option>Niños</option>
 </select>
 
-<input type="tel" placeholder="Teléfono" required>
-<input type="date" required>
+<input type="tel" name="telefono" placeholder="Teléfono" required>
+<input type="date" name="fecha" required>
 
 <button type="submit">Confirmar Reserva</button>
+
 </form>
 
 <iframe 
