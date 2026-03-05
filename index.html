@@ -5,9 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Estética Divo's Alta Peluquería | Salón en Mérida</title>
-
-<meta name="description" content="Estética Divo's Alta Peluquería en Mérida. 4.8 estrellas con 121 reseñas. Agenda tu cita hoy.">
+<title>Estética Divo's Alta Peluquería | Mérida</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
@@ -20,60 +18,58 @@ box-sizing:border-box;
 font-family:'Poppins',sans-serif;
 }
 
-html{
-scroll-behavior:smooth;
+body{
+background:#0e0e0e;
+color:white;
 }
 
-body{
-background:linear-gradient(180deg,#0e0e0e,#1a1a1a);
-color:white;
+section{
+padding:60px 20px;
+max-width:1000px;
+margin:auto;
 }
 
 /* HERO */
 
 .hero{
-min-height:100vh;
+min-height:90vh;
 display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
-padding:40px 20px;
+
 background:
 linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.8)),
 url('https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9') center/cover;
+
 animation:fadeIn 1.2s ease;
 }
 
 .hero h1{
 font-size:2rem;
 margin-bottom:10px;
-animation:slideUp 1s ease;
 }
 
 .rating{
 color:#d4af37;
-font-weight:600;
 margin-bottom:10px;
 }
 
 .hero p{
-max-width:500px;
 opacity:.9;
 margin-bottom:25px;
+max-width:500px;
 }
-
-/* BUTTON */
 
 .cta{
 background:#d4af37;
 color:black;
-padding:16px 28px;
+padding:15px 30px;
 border-radius:40px;
-font-weight:700;
 text-decoration:none;
+font-weight:700;
 transition:.3s;
-box-shadow:0 8px 30px rgba(0,0,0,.4);
 }
 
 .cta:hover{
@@ -81,37 +77,25 @@ transform:scale(1.05);
 background:#f5da74;
 }
 
-/* COUNTER */
-
 .counter{
 margin-top:25px;
-background:rgba(255,255,255,.05);
-padding:15px 20px;
+background:#1a1a1a;
+padding:12px 20px;
 border-radius:15px;
-backdrop-filter:blur(10px);
 }
 
 .counter span{
 color:#d4af37;
 font-weight:700;
-font-size:1.3rem;
 }
 
-/* INFO CARD */
-
-.container{
-padding:40px 20px;
-max-width:1000px;
-margin:auto;
-}
+/* INFO */
 
 .card{
-background:rgba(255,255,255,.05);
+background:#1a1a1a;
 padding:25px;
 border-radius:20px;
-backdrop-filter:blur(10px);
-margin-bottom:25px;
-animation:fadeIn 1.5s ease;
+margin-bottom:30px;
 }
 
 .card a{
@@ -122,10 +106,9 @@ text-decoration:none;
 /* FORM */
 
 .form-section{
-background:rgba(255,255,255,.05);
+background:#1a1a1a;
 padding:30px;
 border-radius:20px;
-backdrop-filter:blur(10px);
 }
 
 form{
@@ -144,17 +127,16 @@ color:white;
 }
 
 button{
-padding:15px;
+padding:14px;
 border:none;
 border-radius:40px;
 background:#d4af37;
 font-weight:700;
 cursor:pointer;
-transition:.3s;
 }
 
 button:hover{
-transform:scale(1.03);
+background:#f5da74;
 }
 
 /* MAP */
@@ -162,21 +144,48 @@ transform:scale(1.03);
 iframe{
 width:100%;
 height:250px;
-border:none;
+border:0;
 border-radius:20px;
 margin-top:20px;
 }
 
 /* REVIEWS */
 
-.review{
-background:rgba(255,255,255,.05);
-padding:20px;
-border-radius:15px;
-margin-bottom:15px;
+.reviews{
+text-align:center;
 }
 
-/* FLOATING BUTTON */
+.reviews h2{
+margin-bottom:30px;
+}
+
+.review{
+opacity:0;
+transform:translateY(20px);
+transition:all .6s ease;
+position:absolute;
+width:100%;
+}
+
+.review.active{
+opacity:1;
+transform:translateY(0);
+position:relative;
+}
+
+.review-card{
+background:#1a1a1a;
+padding:25px;
+border-radius:15px;
+}
+
+.stars{
+color:#d4af37;
+font-size:1.2rem;
+margin-bottom:10px;
+}
+
+/* FLOAT BUTTON */
 
 .book-now{
 position:fixed;
@@ -185,13 +194,11 @@ left:50%;
 transform:translateX(-50%);
 background:#d4af37;
 color:black;
-padding:16px 28px;
+padding:15px 30px;
 border-radius:50px;
 font-weight:700;
 text-decoration:none;
-box-shadow:0 10px 30px rgba(0,0,0,.4);
 z-index:999;
-animation:pulse 2s infinite;
 }
 
 /* WHATSAPP */
@@ -205,31 +212,13 @@ color:white;
 padding:14px 18px;
 border-radius:50px;
 text-decoration:none;
-font-weight:600;
 }
 
-/* ANIMATIONS */
+/* ANIMATION */
 
 @keyframes fadeIn{
 from{opacity:0}
 to{opacity:1}
-}
-
-@keyframes slideUp{
-from{
-opacity:0;
-transform:translateY(30px);
-}
-to{
-opacity:1;
-transform:translateY(0);
-}
-}
-
-@keyframes pulse{
-0%{transform:translateX(-50%) scale(1)}
-50%{transform:translateX(-50%) scale(1.05)}
-100%{transform:translateX(-50%) scale(1)}
 }
 
 @media(min-width:768px){
@@ -245,9 +234,12 @@ height:350px;
 }
 
 </style>
+
 </head>
 
 <body>
+
+<!-- HERO -->
 
 <section class="hero">
 
@@ -258,13 +250,11 @@ height:350px;
 </div>
 
 <p>
-Más de 28 años ofreciendo cortes, peinados y belleza profesional en Mérida.
-Agenda tu cita hoy.
+Más de 28 años brindando belleza y estilo profesional en Mérida.
+Agenda tu cita hoy mismo.
 </p>
 
-<a href="#formulario" class="cta">
-Agendar Cita
-</a>
+<a href="#formulario" class="cta">Agendar Cita</a>
 
 <div class="counter">
 Quedan <span id="spots">6</span> espacios disponibles hoy
@@ -272,25 +262,28 @@ Quedan <span id="spots">6</span> espacios disponibles hoy
 
 </section>
 
+<!-- INFO -->
 
-<section class="container">
+<section>
 
 <div class="card">
 
-<p><strong>Dirección:</strong><br>
+<p><strong>Dirección</strong><br>
 C. 36 29, 31, San Ramón Nte, Mérida</p>
 
 <br>
 
-<p><strong>Teléfono:</strong><br>
+<p><strong>Teléfono</strong><br>
 <a href="tel:+529999441188">999 944 1188</a></p>
 
 <br>
 
-<p><strong>Horario:</strong><br>
+<p><strong>Horario</strong><br>
 Abierto · Cierra 7 PM</p>
 
 </div>
+
+<!-- FORM -->
 
 <div class="form-section" id="formulario">
 
@@ -317,58 +310,85 @@ Abierto · Cierra 7 PM</p>
 
 </form>
 
-<iframe
-src="https://www.google.com/maps?q=C.+36+29,+31,+San+Ramón+Nte,+97117+Mérida,+Yucatán&output=embed">
-</iframe>
+<iframe src="https://www.google.com/maps?q=C.+36+29,+31,+San+Ramón+Nte,+97117+Mérida,+Yucatán&output=embed"></iframe>
 
 </div>
 
 </section>
 
+<!-- REVIEWS -->
 
-<section class="container">
+<section class="reviews">
 
-<h2 style="margin-bottom:20px;">Clientes Felices</h2>
+<h2>Clientes Felices</h2>
 
-<div class="review">
-“Very good attention & service. Fair prices.”
+<div class="review active">
+<div class="review-card">
+<div class="stars">★★★★★</div>
+<p>"Very good attention & service. Fair prices."</p>
+<strong>— Carlos</strong>
+</div>
 </div>
 
 <div class="review">
-“I love my new hairstyle and my manicure.”
+<div class="review-card">
+<div class="stars">★★★★★</div>
+<p>"I love my new hairstyle and my manicure."</p>
+<strong>— Rocio Phelps</strong>
+</div>
 </div>
 
 <div class="review">
-“The best salon in Mérida without a doubt.”
+<div class="review-card">
+<div class="stars">★★★★★</div>
+<p>"The best salon in Mérida without a doubt."</p>
+<strong>— Juan J. Peniche</strong>
+</div>
 </div>
 
 </section>
 
+<a href="#formulario" class="book-now">Agendar Ahora</a>
 
-<a href="#formulario" class="book-now">
-Agendar Ahora
-</a>
-
-<a href="https://wa.me/529999441188" class="whatsapp">
-WhatsApp
-</a>
-
+<a href="https://wa.me/529999441188" class="whatsapp">WhatsApp</a>
 
 <script>
+
+/* availability counter */
 
 let spots=document.getElementById("spots");
 let count=6;
 
 setInterval(()=>{
-
 if(count>2){
 count--;
 spots.textContent=count;
 }
-
 },20000);
+
+
+/* review slider */
+
+const reviews=document.querySelectorAll(".review");
+
+let index=0;
+
+setInterval(()=>{
+
+reviews.forEach(r=>r.classList.remove("active"));
+
+reviews[index].classList.add("active");
+
+index++;
+
+if(index>=reviews.length){
+index=0;
+}
+
+},4000);
 
 </script>
 
 </body>
+</html>
 </html>
